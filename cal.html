@@ -1,0 +1,53 @@
+<html>
+  <body>
+    <title>Calculator</title>
+    <style>
+      body {
+        height: 100vh;                  /* gesamte Fensterhöhe */
+        display: flex;                  /* Flexbox aktivieren */
+        justify-content: center;        /* horizontal mittig */
+        align-items: center;            /* vertikal mittig */
+        background-color: #413e3e;      /* nur zum Testen */
+      }
+      .numbers {
+        display: grid;
+        grid-template-columns: auto auto auto;
+        padding: 10px;
+        width: 50%;
+        
+      }
+      .numbers > button {
+        font-size: 30px;
+        
+        
+      }
+      .calculator_display{
+        
+        background-color: black;
+        
+        height: 50px;
+      }
+    </style>
+
+    <div class="calculator">
+      <div class="calculator_display"></div>
+      <div class="calculator_keys">
+        <div class="numbers">
+          <button>1</button>
+          <button>2</button>
+          <button>3</button>
+
+          <button>4</button>
+          <button>5</button>
+          <button>6</button>
+
+          <button>7</button>
+          <button>8</button>
+          <button>9</button>
+
+          <button>0</button>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
