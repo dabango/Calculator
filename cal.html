@@ -3,37 +3,55 @@
     <title>Calculator</title>
     <style>
       body {
-        height: 100vh;                  /* gesamte Fensterhöhe */
-        display: flex;                  /* Flexbox aktivieren */
-        justify-content: center;        /* horizontal mittig */
-        align-items: center;            /* vertikal mittig */
-        background-color: #413e3e;      /* nur zum Testen */
+        height: 100vh;                  
+        display: flex;                 
+        justify-content: center;        
+        align-items: center;            
+        background-color: #413e3e;      
       }
-      .numbers {
+      .calculator_keys {
         display: grid;
-        grid-template-columns: auto auto auto;
-        padding: 10px;
-        width: 50%;
+        grid-template-columns: 150px 150px 150px 75px 75px;
+        grid-template-rows: 50px 50px 50px 50px;
+        
         
       }
       .numbers > button {
         font-size: 30px;
-        
-        
+        color:rgb(43, 21, 21);
+        background-color: aliceblue;
+        width: 150px;
+        height: 50px;
+        border: none;
+        border-radius: 5px;
+        margin: 5px;
+        cursor: pointer;
+        grid-row-start: 1;
+        grid-row-end: 4;
+        grid-column-start: 1;
+        grid-column-end: 3;
+      }
+      .operators > button{
+        font-size: 30px;
+        width: 75px;
+        height: 50px;
+        cursor: pointer;
+        margin: 5px;
       }
       .calculator_display{
         
-        background-color: black;
+        background-color: rgb(33, 32, 32);
         
-        height: 50px;
+        height: 70px;
       }
+
     </style>
 
     <div class="calculator">
       <div class="calculator_display"></div>
       <div class="calculator_keys">
         <div class="numbers">
-          <button>1</button>
+          <button class="b1">1</button>
           <button>2</button>
           <button>3</button>
 
@@ -46,6 +64,15 @@
           <button>9</button>
 
           <button>0</button>
+        </div>
+        <div class="operators">
+          <button>
+            -
+          </button>
+          <button>
+            +
+          </button>
+          
         </div>
       </div>
     </div>
