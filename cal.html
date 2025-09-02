@@ -59,8 +59,13 @@
       }
       .calculator_display {
         background-color: rgb(33, 32, 32);
-
+        font-size: 40px;
+        color:azure;
         height: 70px;
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+        border-radius: 5px;
       }
     </style>
 
@@ -90,6 +95,30 @@
       </div>
     </div>
     <script>
+      let sum = 0;
+      let currentValue = "";
+      let currentOperator = 
+      let numbers = document.querySelectorAll(".number");
+      let operator = document.querySelectorAll(".operator");
+      let display = document.querySelector(".calculator_display");
+
+      numbers.forEach(btn => {
+        btn.addEventListener("click", () => {
+          currentValue +=  btn.textContent;
+          console.log(currentValue);
+          display.textContent = currentValue;
+        });
+      });
+      operator.forEach(btn => {
+        btn.addEventListener("click", () =>{
+          switch(btn.textContent){
+            case "-":
+              
+          }
+
+        })
+      })
+      display.textContent = currentValue;
       
     </script>
   </body>
