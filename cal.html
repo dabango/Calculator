@@ -3,78 +3,94 @@
     <title>Calculator</title>
     <style>
       body {
-        height: 100vh;                  
-        display: flex;                 
-        justify-content: center;        
-        align-items: center;            
-        background-color: #413e3e;      
+        height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: #413e3e;
       }
       .calculator_keys {
         display: grid;
-        grid-template-columns: 150px 150px 150px 75px 75px;
-        grid-template-rows: 50px 50px 50px 50px;
-        
-        
+        grid-template-columns: 1fr 1fr 1fr  0.5fr;
+        grid-template-rows: 95px 95px 95px 95px;
       }
-      .numbers > button {
+      .number {
         font-size: 30px;
-        color:rgb(43, 21, 21);
-        background-color: aliceblue;
+        color: rgb(83, 74, 74);
+        background-color: rgb(211, 220, 228);
         width: 150px;
-        height: 50px;
+        height: 90px;
         border: none;
         border-radius: 5px;
         margin: 5px;
         cursor: pointer;
-        grid-row-start: 1;
-        grid-row-end: 4;
-        grid-column-start: 1;
-        grid-column-end: 3;
       }
-      .operators > button{
+      .number:hover{
+        background-color: rgb(183, 189, 197);
+      }
+      
+      .operator  {
+        border: none;
         font-size: 30px;
         width: 75px;
-        height: 50px;
+        height: 90px;
+        border-radius: 5px;
+        color: rgb(52, 46, 46);
+        background-color: rgb(251, 186, 112);
         cursor: pointer;
         margin: 5px;
+        
       }
-      .calculator_display{
-        
+      .operator:hover{
+        background-color: rgb(238, 161, 73);
+      }
+      .operator_divide{
+        grid-column-start: 4;
+      }
+      .operator_AC{
+        width: 150px;
+        background-color: #9c9595;
+      }
+      .operator_AC:hover{
+        background-color: #5f5c5c
+      }
+      .operator_equal{
+        width: 150px;
+      }
+      .calculator_display {
         background-color: rgb(33, 32, 32);
-        
+
         height: 70px;
       }
-
     </style>
 
     <div class="calculator">
       <div class="calculator_display"></div>
       <div class="calculator_keys">
-        <div class="numbers">
-          <button class="b1">1</button>
-          <button>2</button>
-          <button>3</button>
+        <button class="number number-1">1</button>
+        <button class="number number-2">2</button>
+        <button class="number number-3">3</button>
+        <button class="operator operator_subtract">-</button>
 
-          <button>4</button>
-          <button>5</button>
-          <button>6</button>
+        <button class="number number-4">4</button>
+        <button class="number number-5">5</button>
+        <button class="number number-6">6</button>
+        <button class="operator operator_add">+</button>
 
-          <button>7</button>
-          <button>8</button>
-          <button>9</button>
+        <button class="number number-7">7</button>
+        <button class="number number-8">8</button>
+        <button class="number number-9">9</button>
+        <button class="operator operator_multiply">*</button>
 
-          <button>0</button>
-        </div>
-        <div class="operators">
-          <button>
-            -
-          </button>
-          <button>
-            +
-          </button>
-          
-        </div>
+        <button class="number number-0">0</button>
+        <button class="operator operator_AC">AC</button>
+        <button class="operator operator_equal">=</button>
+        <button class="operator operator_divide">/</button>
+        
       </div>
     </div>
+    <script>
+      
+    </script>
   </body>
 </html>
