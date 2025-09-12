@@ -95,30 +95,49 @@
       </div>
     </div>
     <script>
-      let sum = 0;
+      
       let currentValue = "";
-      let currentOperator = 
+      let pressedEqual = false;
+      let lastValue = "";
       let numbers = document.querySelectorAll(".number");
       let operator = document.querySelectorAll(".operator");
       let display = document.querySelector(".calculator_display");
 
       numbers.forEach(btn => {
         btn.addEventListener("click", () => {
+          
           currentValue +=  btn.textContent;
-          console.log(currentValue);
+          
           display.textContent = currentValue;
         });
       });
       operator.forEach(btn => {
         btn.addEventListener("click", () =>{
-          switch(btn.textContent){
-            case "-":
-              
+          if(btn.textContent == "="){
+            currentValue = eval(currentValue);
+            display.textContent = currentValue;
+            lastValue = currentValue;
+            currentValue = "";
+            pressedEqual = true;
           }
-
+          else if (btn.textContent == "AC"){
+            currentValue = "";
+            display.textContent = currentValue;
+            pressedEqual = false;
+          }
+          else{
+            if(pressedEqual){
+              currentValue = lastValue;
+            }
+            currentValue += btn.textContent;
+            
+            display.textContent = "";
+            
+          }
+          
         })
       })
-      display.textContent = currentValue;
+      
       
     </script>
   </body>
